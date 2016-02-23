@@ -1,0 +1,10 @@
+<div class="m-popup-content">
+   {{#each contents}}
+   <div class="m-content">
+      {{#gt ../contents.length 1}}
+      <p class="m-title">{{{title}}}</p>
+      {{/gt}}
+      <div class="m-body">{{{body}}}</div>
+   </div>
+   {{/each}}
+</div>
