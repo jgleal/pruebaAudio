@@ -1,0 +1,27 @@
+{
+   "url": {
+      "name": "geosearchbylocation",
+      "separator": "*"
+   },
+   "constructor": "M.plugin.Geosearchbylocation",
+   "parameters": [{
+      "type": "object",
+      "properties": [{
+         "type": "simple",
+         "name": "url",
+         "position": 0
+      }, {
+         "type": "simple",
+         "name": "core",
+         "value": ""
+      }, {
+         "type": "simple",
+         "name": "handler",
+         "value": ""
+      }, {
+         "type": "simple",
+         "name": "distance",
+         "position": 1
+      }]
+   }]
+}

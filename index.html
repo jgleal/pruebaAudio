@@ -6,6 +6,8 @@
 
    <title>Mapea4 JS</title>
    <link href="assets/css/mapea.ol3.min.css" rel="stylesheet" />
+   <link type="text/css" href="plugins/geobusquedas/geobusquedas.min.css" rel="stylesheet"></link>
+   <link type="text/css" href="plugins/geosearchbylocation/geosearchbylocation.min.css" rel="stylesheet"></link>
    <style type="text/css">
       html, body {
 	margin: 0;
@@ -20,17 +22,21 @@
 
    <div id="mapajs" class="container" class="m-container m-mapea-container"></div>
   
-
+   <script type="text/javascript" src="cordova.js"></script>
    <script src="js/mapea.ol3.min.js "></script>
    <script src="js/configuration.js "></script>
+   <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
+   <script type="text/javascript" src="plugins/geobusquedas/mapea.geobusquedas.ol3.min.js"></script>
+   <script type="text/javascript" src="plugins/geosearchbylocation/mapea.geosearchbylocation.ol3.min.js"></script>
    <script type="text/javascript">
-      M.proxy(false);
-      
-      var mapajs = M.map({
-         container: 'mapajs'     
-      });
-
-      mapajs.addControls(['scale', 'scaleline']);
+     M.proxy(false);
+     var mapajs = M.map({
+		    controls:["mouse","panzoombar","panzoom","navtoolbar","layerswitcher","overviewmap","scale","scaleline","location"],
+		    container:"mapajs",
+		    getfeatureinfo:"html"})
+	  .addPlugin(new M.plugin.Geosearchbylocation({"core":"","handler":""}))
+	  .addPlugin(new M.plugin.Geobusquedas({"core":"sigc","url":"http://geobusquedas-sigc.juntadeandalucia.es/","handler":"/search"}));
       
    </script>
 </body>

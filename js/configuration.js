@@ -111,7 +111,7 @@
        * @public
        * @api stable
        */
-      'urls': 'http://mapea-sigc.juntadeandalucia.es/Componente/mapConfig/contextCallejeroCache.xml,http://mapea-sigc.juntadeandalucia.es/Componente/mapConfig/contextCallejero.xml,http://mapea-sigc.juntadeandalucia.es/Componente/mapConfig/contextOrtofoto.xml,http://mapea-sigc.juntadeandalucia.es/Componente/mapConfig/contextIDEA.xml,http://mapea-sigc.juntadeandalucia.es/Componente/mapConfig/contextOrtofoto2009.xml,http://mapea-sigc.juntadeandalucia.es/Componente/mapConfig/callejero2011cache.xml,http://mapea-sigc.juntadeandalucia.es/Componente/mapConfig/ortofoto2011cache.xml,http://mapea-sigc.juntadeandalucia.es/Componente/mapConfig/hibrido2011cache.xml'.split(','),
+      'urls': 'files/wmc/contextCallejeroCache.xml,files/wmc/contextCallejero.xml,files/wmc/contextOrtofoto.xml,files/wmc/contextIDEA.xml,files/wmc/contextOrtofoto2009.xml,files/wmc/callejero2011cache.xml,files/wmc/ortofoto2011cache.xml,files/wmc/hibrido2011cache.xml'.split(','),
 
       /**
        * WMC predefined names
