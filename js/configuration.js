@@ -40,7 +40,7 @@
     * @public
     * @api stable
     */
-   M.config('TEMPLATES_PATH', '/files/templates/');
+   M.config('TEMPLATES_PATH', 'android_asset/www/files/templates/');
 
    /**
     * The Geosearch URL
