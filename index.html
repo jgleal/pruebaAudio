@@ -32,12 +32,13 @@
    <script type="text/javascript">
      M.proxy(false);
      var mapajs = M.map({
-		    controls:["panzoom","navtoolbar","layerswitcher","scale","scaleline","location"],
+		    controls:["panzoom","navtoolbar","scale","scaleline","location"],
 		    container:"mapajs",
 		    getfeatureinfo:"html"})
-	  .addPlugin(new M.plugin.Geosearchbylocation({"core":"","handler":""}))
-	  .addPlugin(new M.plugin.Geobusquedas({"core":"sigc","url":"http://geobusquedas-sigc.juntadeandalucia.es/","handler":"/search"}));
-      
+	  .addPlugin(new M.plugin.Geosearchbylocation()) //conf por defecto
+	  .addPlugin(new M.plugin.Geobusquedas());//conf por defecto
+     
+     navigator.splashscreen.hide();
    </script>
 </body>
 
