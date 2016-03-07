@@ -1,0 +1,31 @@
+{
+   "url": {
+      "name": "autocomplete"
+   },
+   "constructor": "M.plugin.Autocomplete",
+   "parameters": [{
+         "type": "simple",
+         "name": "url",
+         "position": 0
+      }, {
+         "type": "simple",
+         "name": "minLength",
+         "position": 1
+      }, {
+         "type": "simple",
+         "name": "delay",
+         "position": 2
+      }, {
+         "type": "simple",
+         "name": "target",
+         "position": 3
+      }, {
+         "type": "simple",
+         "name": "limit",
+         "position": 4
+      }, {
+         "type": "simple",
+         "name": "html",
+         "position": 5
+      }]
+}

@@ -6,14 +6,13 @@
             <div class="title">Capas base</div>
             <ul>
                {{#each baseLayers}}
-               <li{{#if outOfRange}} class="disabled" {{/if}}>
+               <li{{#if outOfRange}} class="disabled"{{/if}}>
                   <div class="layer-base">
-                    <i id="{{id}}" class="g-cartografia-check{{#if visible}}5{{^}}4{{/if}}"></i>
-                     <i id="{{id}}" class="fa fa-{{#if visible}}dot-{{/if}}circle-o"></i>
+                     <span id="{{id}}" class="m-check g-cartografia-check{{#if visible}}5{{^}}4{{/if}}"></span>
                      <span>{{title}}</span>
                   </div>
-                </li>
-                {{/each}}
+               </li>
+               {{/each}}
             </ul>
          </li>
          {{/gt}}
@@ -23,13 +22,12 @@
                {{#each overlayLayers}}
                <li class="{{#if outOfRange}}disabled{{/if}}{{#if visible}} visible{{/if}}">
                   <div class="layer">
-                     <i id="{{id}}" class="g-cartografia-check{{#if visible}}3{{^}}2{{/if}}"></i>
+                     <span id="{{id}}" class="m-check g-cartografia-check{{#if visible}}3{{^}}2{{/if}}"></span>
                      <span>{{title}}</span>
                   </div>
                   <div class="legend">
                      <img src="{{legend}}"></img>
                   </div>
-                  <!-- <div class="legend" style="background-image: url('{{legend}}')"></div> -->
                </li>
                {{/each}}
             </ul>
