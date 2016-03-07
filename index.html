@@ -29,14 +29,15 @@
    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
    <script type="text/javascript" src="plugins/geobusquedas/mapea.geobusquedas.ol3.min.js"></script>
    <script type="text/javascript" src="plugins/geosearchbylocation/mapea.geosearchbylocation.ol3.min.js"></script>
+
    <script type="text/javascript">
      M.proxy(false);
      var mapajs = M.map({
 		    controls:["panzoom","navtoolbar","scale","scaleline","location"],
 		    container:"mapajs",
 		    getfeatureinfo:"html"})
-	  .addPlugin(new M.plugin.Geosearchbylocation({})) //conf por defecto
-	  .addPlugin(new M.plugin.Geobusquedas({}));//conf por defecto
+		      .addPlugin(new M.plugin.Geosearchbylocation()) //conf por defecto
+		      .addPlugin(new M.plugin.Geobusquedas());//conf por defecto		      
      
      navigator.splashscreen.hide();
    </script>

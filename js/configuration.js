@@ -41,6 +41,15 @@
     * @api stable
     */
    M.config('TEMPLATES_PATH', 'files/templates/');
+   
+    /**
+    * The path to the Mapea theme
+    * @const
+    * @type {string}
+    * @public
+    * @api stable
+    */
+   M.config('THEME_URL', 'assets/');
 
    /**
     * The Geosearch URL
@@ -174,7 +183,7 @@
        * @public
        * @api stable
        */
-      'FORMAT': 'png',
+      'FORMAT': 'pdf',
 
       /**
        * WMC context names
