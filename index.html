@@ -35,8 +35,8 @@
 		    controls:["panzoom","navtoolbar","scale","scaleline","location"],
 		    container:"mapajs",
 		    getfeatureinfo:"html"})
-	  .addPlugin(new M.plugin.Geosearchbylocation()) //conf por defecto
-	  .addPlugin(new M.plugin.Geobusquedas());//conf por defecto
+	  .addPlugin(new M.plugin.Geosearchbylocation({})) //conf por defecto
+	  .addPlugin(new M.plugin.Geobusquedas({}));//conf por defecto
      
      navigator.splashscreen.hide();
    </script>
