@@ -10,10 +10,10 @@
    <link type="text/css" href="plugins/geosearchbylocation/geosearchbylocation.min.css" rel="stylesheet"></link>
    <style type="text/css">
       html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	overflow: hidden;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
       }
    </style>
 </head>
@@ -23,10 +23,9 @@
    <div id="mapajs" class="container" class="m-container m-mapea-container"></div>
   
    <script type="text/javascript" src="cordova.js"></script>
+   <script src="js/browser-polyfill.js"></script>
    <script src="js/mapea.ol3.min.js "></script>
    <script src="js/configuration.js "></script>
-   <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
-   <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
    <script type="text/javascript" src="plugins/geobusquedas/mapea.geobusquedas.ol3.min.js"></script>
    <script type="text/javascript" src="plugins/geosearchbylocation/mapea.geosearchbylocation.ol3.min.js"></script>
 
@@ -39,7 +38,10 @@
 		      .addPlugin(new M.plugin.Geosearchbylocation()) //conf por defecto
 		      .addPlugin(new M.plugin.Geobusquedas());//conf por defecto		      
      
-     navigator.splashscreen.hide();
+     mapajs.on(M.evt.COMPLETED, function() {
+        navigator.splashscreen.hide();
+     });
+
    </script>
 </body>
 
