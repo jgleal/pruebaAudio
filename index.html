@@ -6,7 +6,7 @@
 
    <title>Mapea4 JS</title>
    <link href="assets/css/mapea.ol3.min.css" rel="stylesheet" />
-   <link type="text/css" href="plugins/geobusquedas/geobusquedas.min.css" rel="stylesheet"></link>
+   <link type="text/css" href="plugins/geosearch/geosearch.min.css" rel="stylesheet"></link>
    <link type="text/css" href="plugins/geosearchbylocation/geosearchbylocation.min.css" rel="stylesheet"></link>
    <style type="text/css">
       html, body {
@@ -26,7 +26,7 @@
    <script src="js/browser-polyfill.js"></script>
    <script src="js/mapea.ol3.min.js "></script>
    <script src="js/configuration.js "></script>
-   <script type="text/javascript" src="plugins/geobusquedas/mapea.geobusquedas.ol3.min.js"></script>
+   <script type="text/javascript" src="plugins/geosearch/mapea.geosearch.ol3.min.js"></script>
    <script type="text/javascript" src="plugins/geosearchbylocation/mapea.geosearchbylocation.ol3.min.js"></script>
 
    <script type="text/javascript">
@@ -36,7 +36,7 @@
 		    container:"mapajs",
 		    getfeatureinfo:"html"})
 		      .addPlugin(new M.plugin.Geosearchbylocation()) //conf por defecto
-		      .addPlugin(new M.plugin.Geobusquedas());//conf por defecto		      
+		      .addPlugin(new M.plugin.Geosearch());//conf por defecto		      
      
      mapajs.on(M.evt.COMPLETED, function() {
         navigator.splashscreen.hide();
