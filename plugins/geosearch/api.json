@@ -3,7 +3,7 @@
       "name": "geosearch",
       "separator": "*"
    },
-   "constructor": "M.plugin.Geobusquedas",
+   "constructor": "M.plugin.Geosearch",
    "parameters": [{
       "type": "object",
       "properties": [{

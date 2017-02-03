@@ -8,20 +8,20 @@
       "type": "object",
       "properties": [{
          "type": "simple",
-         "name": "url",
+         "name": "distance",
          "position": 0
       }, {
          "type": "simple",
+         "name": "url",
+         "position": 1
+      }, {
+         "type": "simple",
          "name": "core",
-         "value": ""
+         "position": 2
       }, {
          "type": "simple",
          "name": "handler",
-         "value": ""
-      }, {
-         "type": "simple",
-         "name": "distance",
-         "position": 1
+         "position": 3
       }]
    }]
 }
