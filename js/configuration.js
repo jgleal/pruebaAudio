@@ -21,7 +21,7 @@
     * @public
     * @api stable
     */
-   M.config('PROXY_PATH', '/api/proxy');
+   M.config('PROXY_URL', 'http://localhost:8080/mapea/api/proxy');
 
    /**
     * The path to the Mapea proxy to send
@@ -31,7 +31,7 @@
     * @public
     * @api stable
     */
-   M.config('PROXY_POST_PATH', '/proxyPost');
+   M.config('PROXY_POST_URL', 'http://localhost:8080/mapea/proxyPost');
 
    /**
     * The path to the Mapea templates
@@ -238,8 +238,8 @@
     * @public
     * @api stable
     */
-   M.config('SEARCHSTREET_URL', 'http://ws079.juntadeandalucia.es/EXT_PUB_CallejeroREST/buscarCallejero');
-   
+   M.config('SEARCHSTREET_URL', 'http://ws079.juntadeandalucia.es/EXT_PUB_CallejeroREST/geocoderMunProvSrs');
+
    /**
     * Autocomplete municipality service URL
     * @const
@@ -248,7 +248,7 @@
     * @api stable
     */
    M.config('SEARCHSTREET_URLCODINEAUTOCOMPLETE', 'http://ws079.juntadeandalucia.es/EXT_PUB_CallejeroREST/autocompletarDireccionMunicipio');
-   
+
    /**
     * service URL check code INE
     * @const
@@ -257,13 +257,70 @@
     * @api stable
     */
    M.config('SEARCHSTREET_URLCOMPROBARINE', 'http://ws079.juntadeandalucia.es/EXT_PUB_CallejeroREST/comprobarCodIne');
-   
+
    /**
-    * Autocomplete service URL
+    * Normalizar searchstreet service URL
     * @const
     * @type {string}
     * @public
     * @api stable
     */
-   M.config('AUTOCOMPLETADOR_URL', 'http://ws079.juntadeandalucia.es/EXT_PUB_CallejeroREST/autocompletarDireccion');
+   M.config('SEARCHSTREET_NORMALIZAR', 'http://ws079.juntadeandalucia.es/EXT_PUB_CallejeroREST/normalizar');
+
+   /**
+    * Minimum number of characters to start autocomplete
+    * @const
+    * @type {number}
+    * @public
+    * @api stable
+    */
+    M.config('AUTOCOMPLETE_MINLENGTH', '3');
+
+    /**
+     * TODO
+     *
+     * @private
+     * @type {Number}
+     */
+    M.config('AUTOCOMPLETE_DELAYTIME', '750');
+
+    /**
+     * Number of results to show
+     *
+     * @private
+     * @type {Number}
+     */
+    M.config('AUTOCOMPLETE_LIMIT', '10');
+
+    /**
+     * TODO
+     *
+     * @private
+     * @type {String}
+     */
+    M.config('MAPBOX_URL', 'https://api.mapbox.com/v4/');
+
+    /**
+     * TODO
+     *
+     * @private
+     * @type {String}
+     */
+    M.config('MAPBOX_EXTENSION', 'png');
+
+    /**
+     * TODO
+     *
+     * @private
+     * @type {String}
+     */
+    M.config('MAPBOX_TOKEN_NAME', 'access_token');
+
+    /**
+     * TODO
+     *
+     * @private
+     * @type {String}
+     */
+    M.config('MAPBOX_TOKEN_VALUE', '');
 })(window.M);
