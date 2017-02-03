@@ -120,7 +120,7 @@
        * @public
        * @api stable
        */
-      'urls': 'files/wmc/context_cdau_callejero,files/wmc/context_cdau_hibrido.xml,files/wmc/context_cdau_satelite.xml,files/wmc/contextCallejeroCache.xml,files/wmc/contextCallejero.xml,files/wmc/contextOrtofoto.xml,files/wmc/contextIDEA.xml,files/wmc/contextOrtofoto2009.xml,files/wmc/callejero2011cache.xml,files/wmc/ortofoto2011cache.xml,files/wmc/hibrido2011cache.xml'.split(','),
+      'urls': 'files/wmc/context_cdau_callejero.xml,files/wmc/context_cdau_hibrido.xml,files/wmc/context_cdau_satelite.xml,files/wmc/contextCallejeroCache.xml,files/wmc/contextCallejero.xml,files/wmc/contextOrtofoto.xml,files/wmc/contextIDEA.xml,files/wmc/contextOrtofoto2009.xml,files/wmc/callejero2011cache.xml,files/wmc/ortofoto2011cache.xml,files/wmc/hibrido2011cache.xml'.split(','),
 
       /**
        * WMC predefined names
