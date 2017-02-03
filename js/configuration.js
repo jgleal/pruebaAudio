@@ -21,7 +21,7 @@
     * @public
     * @api stable
     */
-   M.config('PROXY_URL', 'http://localhost:8080/mapea/api/proxy');
+   M.config('PROXY_URL', '/api/proxy');
 
    /**
     * The path to the Mapea proxy to send
@@ -31,7 +31,7 @@
     * @public
     * @api stable
     */
-   M.config('PROXY_POST_URL', 'http://localhost:8080/mapea/proxyPost');
+   M.config('PROXY_POST_URL', '/proxyPost');
 
    /**
     * The path to the Mapea templates
