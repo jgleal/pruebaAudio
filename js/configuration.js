@@ -120,7 +120,7 @@
        * @public
        * @api stable
        */
-      'urls': 'files/wmc/contextCallejeroCache.xml,files/wmc/contextCallejero.xml,files/wmc/contextOrtofoto.xml,files/wmc/contextIDEA.xml,files/wmc/contextOrtofoto2009.xml,files/wmc/callejero2011cache.xml,files/wmc/ortofoto2011cache.xml,files/wmc/hibrido2011cache.xml'.split(','),
+      'urls': 'files/wmc/context_cdau_callejero,files/wmc/context_cdau_hibrido.xml,files/wmc/context_cdau_satelite.xml,files/wmc/contextCallejeroCache.xml,files/wmc/contextCallejero.xml,files/wmc/contextOrtofoto.xml,files/wmc/contextIDEA.xml,files/wmc/contextOrtofoto2009.xml,files/wmc/callejero2011cache.xml,files/wmc/ortofoto2011cache.xml,files/wmc/hibrido2011cache.xml'.split(','),
 
       /**
        * WMC predefined names
@@ -129,7 +129,7 @@
        * @public
        * @api stable
        */
-      'predefinedNames': 'callejerocacheado,callejero,ortofoto,idea,ortofoto09,callejero2011cache,ortofoto2011cache,hibrido2011cache'.split(','),
+      'predefinedNames': 'dau,cdau_hibrido,cdau_satelite,callejerocacheado,callejero,ortofoto,idea,ortofoto09,callejero2011cache,ortofoto2011cache,hibrido2011cache'.split(','),
 
       /**
        * WMC context names
@@ -138,7 +138,7 @@
        * @public
        * @api stable
        */
-      'names': 'mapa callejero cache,mapa del callejero,mapa ortofoto,mapa idea,mapa ortofoto09,Callejero,Ortofoto,Híbrido'.split(',')
+      'names': 'Callejero,Satelite,Hibrido,mapa callejero cache,mapa del callejero,mapa ortofoto,mapa idea,mapa ortofoto09,Callejero,Ortofoto,Híbrido'.split(',')
    });
 
    /**
@@ -148,7 +148,7 @@
     * @public
     * @api stable
     */
-   M.config('DEFAULT_PROJ', 'EPSG:23030*m');
+   M.config('DEFAULT_PROJ', 'EPSG:25830*m');
 
    /**
     * Predefined WMC files. It is composed of URL,
