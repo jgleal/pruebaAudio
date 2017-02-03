@@ -129,7 +129,7 @@
        * @public
        * @api stable
        */
-      'predefinedNames': 'dau,cdau_hibrido,cdau_satelite,callejerocacheado,callejero,ortofoto,idea,ortofoto09,callejero2011cache,ortofoto2011cache,hibrido2011cache'.split(','),
+      'predefinedNames': 'cdau,cdau_hibrido,cdau_satelite,callejerocacheado,callejero,ortofoto,idea,ortofoto09,callejero2011cache,ortofoto2011cache,hibrido2011cache'.split(','),
 
       /**
        * WMC context names
