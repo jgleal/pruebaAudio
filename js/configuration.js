@@ -1,9 +1,17 @@
 /**
  * Mapea API
- * Version 4.0.0-SNAPSHOT
- * Date 19-02-2016
+ * Version 4.0.4
+ * Date 24-04-2017
  */
 (function (M) {
+   /**
+    * Pixels width for mobile devices
+    *
+    * @private
+    * @type {Number}
+    */
+   M.config('MOBILE_WIDTH', 768);
+
    /**
     * The Mapea URL
     * @const
@@ -21,7 +29,7 @@
     * @public
     * @api stable
     */
-   M.config('PROXY_URL', '/api/proxy');
+   M.config('PROXY_URL', '');
 
    /**
     * The path to the Mapea proxy to send
@@ -31,7 +39,7 @@
     * @public
     * @api stable
     */
-   M.config('PROXY_POST_URL', '/proxyPost');
+   M.config('PROXY_POST_URL', '');
 
    /**
     * The path to the Mapea templates
@@ -41,8 +49,8 @@
     * @api stable
     */
    M.config('TEMPLATES_PATH', 'files/templates/');
-   
-    /**
+
+   /**
     * The path to the Mapea theme
     * @const
     * @type {string}
@@ -103,7 +111,16 @@
     * @public
     * @api stable
     */
-   M.config('GEOSEARCH_ROWS', '100');
+   M.config('GEOSEARCH_ROWS', '20');
+
+   /**
+    * The Geosearch rows
+    * @const
+    * @type {string}
+    * @public
+    * @api stable
+    */
+   M.config('GEOSEARCHBYLOCATION_ROWS', '100');
 
    /**
     * Predefined WMC files. It is composed of URL,
@@ -120,7 +137,7 @@
        * @public
        * @api stable
        */
-      'urls': 'files/wmc/context_cdau_callejero.xml,files/wmc/context_cdau_hibrido.xml,files/wmc/context_cdau_satelite.xml,files/wmc/contextCallejeroCache.xml,files/wmc/contextCallejero.xml,files/wmc/contextOrtofoto.xml,files/wmc/contextIDEA.xml,files/wmc/contextOrtofoto2009.xml,files/wmc/callejero2011cache.xml,files/wmc/ortofoto2011cache.xml,files/wmc/hibrido2011cache.xml'.split(','),
+      'urls': 'files/wmc/context_cdau_callejero.xml,files/wmc/context_cdau_hibrido.xml,files/wmc/context_cdau_satelite.xml,files/wmc/contextCallejeroCache.xml,files/wmc/contextCallejero.xml,files/wmc/contextIDEA.xml,files/wmc/contextOrtofoto2009.xml,files/wmc/callejero2011cache.xml,files/wmc/ortofoto2011cache.xml,files/wmc/hibrido2011cache.xml,files/wmc/contextOrtofoto.xml'.split(','),
 
       /**
        * WMC predefined names
@@ -129,7 +146,7 @@
        * @public
        * @api stable
        */
-      'predefinedNames': 'cdau,cdau_hibrido,cdau_satelite,callejerocacheado,callejero,ortofoto,idea,ortofoto09,callejero2011cache,ortofoto2011cache,hibrido2011cache'.split(','),
+      'predefinedNames': 'cdau,cdau_hibrido,cdau_satelite,callejerocacheado,callejero,idea,ortofoto09,callejero2011cache,ortofoto2011cache,hibrido2011cache,ortofoto'.split(','),
 
       /**
        * WMC context names
@@ -138,9 +155,9 @@
        * @public
        * @api stable
        */
-      'names': 'Callejero,Satelite,Hibrido,mapa callejero cache,mapa del callejero,mapa ortofoto,mapa idea,mapa ortofoto09,Callejero,Ortofoto,Híbrido'.split(',')
+      'names': 'Callejero,Hibrido,Satelite,mapa callejero cache,mapa del callejero,mapa idea,mapa ortofoto09,Callejero,Ortofoto,HÃ­brido,mapa ortofoto'.split(',')
    });
-   
+
    /**
     * TODO
     * @type {object}
@@ -245,7 +262,16 @@
        * @public
        * @api stable
        */
-      'FORCE_SCALE': false
+      'FORCE_SCALE': false,
+
+      /**
+       * TODO
+       * @const
+       * @type {boolean}
+       * @public
+       * @api stable
+       */
+      'LEGEND': true
    });
 
    /**
@@ -274,7 +300,7 @@
        */
       'EDITION': 'drawfeature,modifyfeature,deletefeature,editattribute,savefeature,clearfeature'.split(',')
    });
-   
+
    /**
     * Searchstreet service URL
     * @const
@@ -366,5 +392,6 @@
      * @private
      * @type {String}
      */
-    M.config('MAPBOX_TOKEN_VALUE', '');
+    M.config('MAPBOX_TOKEN_VALUE', 'pk.eyJ1Ijoic2lnY29ycG9yYXRpdm9qYSIsImEiOiJjaXczZ3hlc2YwMDBrMm9wYnRqd3gyMWQ0In0.wF12VawgDM31l5RcAGb6AA');
 })(window.M);
+

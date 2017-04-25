@@ -1,36 +1,35 @@
 {
    "url": {
-      "name": "geosearchbylocation",
-      "separator": "*"
+      "name": "wfstcontrols",
+      "separator": ","
    },
-   "constructor": "M.plugin.Geosearchbylocation",
+   "constructor": "M.plugin.WFSTControls",
    "parameters": [{
-      "type": "object",
+      "type": "array",
       "properties": [{
          "type": "simple",
-         "name": "distance",
          "position": 0
       }, {
          "type": "simple",
-         "name": "url",
          "position": 1
       }, {
          "type": "simple",
-         "name": "core",
          "position": 2
       }, {
          "type": "simple",
-         "name": "handler",
          "position": 3
+      }, {
+         "type": "simple",
+         "position": 4
       }]
    }],
    "files": {
       "ol": {
          "scripts": [
-            "geosearchbylocation.ol.min.js"
+            "wfstcontrols.ol.min.js"
          ],
          "styles": [
-            "geosearchbylocation.min.css"
+            "wfstcontrols.min.css"
          ]
       }
    }
