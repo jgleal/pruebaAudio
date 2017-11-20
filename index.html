@@ -35,6 +35,7 @@
      document.addEventListener("deviceready", onDeviceReady, false);
       function onDeviceReady() {
           console.log("ready ", Media);
+      }
 
           M.proxy(false);
           var mapajs = M.map({
@@ -59,7 +60,7 @@
             var media = new Media("https://archive.org/download/testmp3testfile/mpthreetest.mp3", mediaSuccess, mediaError);
             media.play();
           }
-}
+
 
    </script>
 </body>
