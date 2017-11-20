@@ -57,6 +57,8 @@
               console.log("media error");
           }
           function play(){
+            var audio = new Audio("https://archive.org/download/testmp3testfile/mpthreetest.mp3");
+            audio.play();
             var media = new Media("https://archive.org/download/testmp3testfile/mpthreetest.mp3", mediaSuccess, mediaError);
             media.play();
           }
