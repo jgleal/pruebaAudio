@@ -32,29 +32,34 @@
    <script type="text/javascript" src="plugins/geosearchbylocation/geosearchbylocation.ol.min.js"></script>
 
    <script type="text/javascript">
-     M.proxy(false);
-     var mapajs = M.map({
-		    controls:["panzoom","navtoolbar","scale","scaleline","location"],
-		    container:"mapajs",
-		    wmcfiles: ["cdau"],
-		    getfeatureinfo:"html"})
-		      .addPlugin(new M.plugin.Geosearchbylocation()) //conf por defecto
-		      .addPlugin(new M.plugin.Geosearch());//conf por defecto		      
-     
-     mapajs.on(M.evt.COMPLETED, function() {
-        navigator.splashscreen.hide();
-     });
+     document.addEventListener("deviceready", onDeviceReady, false);
+      function onDeviceReady() {
+          console.log(Media);
 
-     function mediaSuccess(){
-        console.log("play finish!");
-     }
-     function mediaError(){
-        console.log("media error");
-     }
-     function play(){
-      var media = new Media("https://archive.org/download/testmp3testfile/mpthreetest.mp3", mediaSuccess, mediaError);
-      media.play();
-     }
+          M.proxy(false);
+          var mapajs = M.map({
+              controls:["panzoom","navtoolbar","scale","scaleline","location"],
+              container:"mapajs",
+              wmcfiles: ["cdau"],
+              getfeatureinfo:"html"})
+                .addPlugin(new M.plugin.Geosearchbylocation()) //conf por defecto
+                .addPlugin(new M.plugin.Geosearch());//conf por defecto		      
+          
+          mapajs.on(M.evt.COMPLETED, function() {
+              navigator.splashscreen.hide();
+          });
+
+          function mediaSuccess(){
+              console.log("play finish!");
+          }
+          function mediaError(){
+              console.log("media error");
+          }
+          function play(){
+            var media = new Media("https://archive.org/download/testmp3testfile/mpthreetest.mp3", mediaSuccess, mediaError);
+            media.play();
+          }
+}
 
    </script>
 </body>
