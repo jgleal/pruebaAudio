@@ -19,7 +19,9 @@
 </head>
 
 <body>
-
+   <div id="divaudio">
+    <a href="javascript:play()" class="ui-btn">Reproducir audio</a>
+   </div>
    <div id="mapajs" class="container" class="m-container m-mapea-container"></div>
   
    <script type="text/javascript" src="cordova.js"></script>
@@ -42,6 +44,17 @@
      mapajs.on(M.evt.COMPLETED, function() {
         navigator.splashscreen.hide();
      });
+
+     function mediaSuccess(){
+        console.log("play finish!");
+     }
+     function mediaError(){
+        console.log("media error");
+     }
+     function play(){
+      var media = new Media("https://archive.org/download/testmp3testfile/mpthreetest.mp3", mediaSuccess, mediaError);
+      media.play();
+     }
 
    </script>
 </body>
